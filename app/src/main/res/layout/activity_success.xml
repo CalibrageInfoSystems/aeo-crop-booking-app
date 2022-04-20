@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SuccessActivity">
+
+    <ImageView
+        android:id="@+id/imglogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:src="@drawable/ic_land"/>
+
+    <TextView
+
+        android:layout_marginTop="-80dp"
+        android:layout_below="@+id/imglogo"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Thank You!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txtsuccess"
+        android:layout_marginTop="-60dp"
+        android:layout_below="@+id/imglogo"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Your Details Submitted Successfully"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:textColor="@color/white"
+        android:onClick="onclick"
+        android:layout_marginTop="10dp"
+       android:background="@drawable/buttonbackground"
+        android:textAllCaps="false"
+        android:text="  Add One More Farmer  "
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtsuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

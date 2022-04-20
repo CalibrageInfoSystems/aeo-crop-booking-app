@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@color/light_gray2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <LinearLayout
+
+        android:layout_margin="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/cornerbackground">
+
+    <LinearLayout
+        android:layout_gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="20dp"
+            android:weightSum="1"
+            android:layout_weight="0.8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text=" Farmer and plot details"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text=" This section contains basic and crop details"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:weightSum="1"
+            android:layout_weight="0.2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="Step 1/2"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Contact Information"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="PPB Number"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:background="@drawable/spinner_bg"
+        android:id="@+id/ppbnumber_et"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:inputType="text"
+        android:hint="Enter PPB Number"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="District"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/spinner_bg"
+        android:elevation="2dp">
+
+        <Spinner
+            android:id="@+id/districtSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:minHeight="0dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:src="@drawable/downarroww" />
+    </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="Mandal"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/spinner_bg"
+        android:elevation="2dp">
+
+        <Spinner
+
+            android:id="@+id/mandalspinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:minHeight="0dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:src="@drawable/downarroww" />
+    </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="Village"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/spinner_bg"
+        android:elevation="2dp">
+
+        <Spinner
+
+            android:id="@+id/villagespinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:minHeight="0dp"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:src="@drawable/downarroww" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="Farmer Name"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/farmername"
+        android:background="@drawable/spinner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:inputType="text"
+        android:hint="Enter Farmer Name"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="Father Name"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/fathername"
+        android:background="@drawable/spinner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:inputType="text"
+        android:hint="Enter Father Name"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:drawablePadding="5dp"
+        android:paddingTop="5dp"
+        android:text="Mobile  Number"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/mobilenumber"
+        android:background="@drawable/spinner_bg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="6dp"
+        android:inputType="number"
+        android:maxEms="10"
+        android:maxLength="10"
+        android:hint="Enter Mobile Number"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Plot Survey Number"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:background="@drawable/spinner_bg"
+            android:id="@+id/plotsurverynumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:inputType="text"
+            android:hint="Enter Plot Survey Number"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Plot Size(Acres)"
+            android:textColor="@color/black"/>
+
+        <EditText
+
+            android:id="@+id/plotsizeynumber"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/spinner_bg"
+            android:hint="Enter Plot Size"
+            android:inputType="numberDecimal"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Source of Irrigation"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/spinner_bg"
+            android:elevation="2dp">
+
+            <Spinner
+                android:id="@+id/sourceofirrigation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:minHeight="0dp"
+                android:layout_marginLeft="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:padding="10dp"
+                android:src="@drawable/downarroww" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:drawablePadding="5dp"
+                android:paddingTop="5dp"
+                android:text="Drip Irrigation"
+                android:textColor="@color/black"/>
+
+            <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                android:id="@+id/toggle_drip"
+                custom:inactiveTextColor="@color/black"
+                custom:activeBgColor="@color/green"
+                custom:inactiveBgColor="@color/gray_light"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:textToggleLeft="Micro"
+                custom:textToggleRight="Drip"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp">
+
+
+            <Button
+                android:id="@+id/nextButton"
+                android:paddingLeft="10dp"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="   Next   "
+                android:textSize="18dp"
+                android:drawableRight="@drawable/rightarriw"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

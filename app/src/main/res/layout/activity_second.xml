@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context=".SecondActivity"
+    android:orientation="vertical"
+    android:background="@color/light_gray2">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/plotlyt"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:background="@drawable/cornerbackground">
+        <TextView
+            android:id="@+id/txtplotsCout"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Added Plots"
+            android:textColor="@color/black"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvPlots"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/cornerbackground">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+                android:weightSum="1"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:text=" Crop Details"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text=" This section contains basic and crop details"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="1"
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    android:text="Step 2/2"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plot and Crop Details"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Crop Type"
+                    android:textColor="@color/black"/>
+
+                <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+
+                    android:id="@+id/toggleCroptype"
+                    custom:inactiveTextColor="@color/black"
+                    custom:activeBgColor="@color/green"
+                    android:layout_marginTop="10dp"
+                    custom:toggleWidth="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:textToggleLeft="Main"
+                    custom:textToggleRight="Intercrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Crop Name"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/spinner_bg"
+                    android:elevation="2dp">
+
+                    <Spinner
+                        android:id="@+id/cropname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:minHeight="0dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:padding="10dp"
+                        android:src="@drawable/downarroww" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Crop Variety"
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/spinner_bg"
+                    android:elevation="2dp">
+
+                    <Spinner
+                        android:id="@+id/cropvariety"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:minHeight="0dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:padding="10dp"
+                        android:src="@drawable/downarroww" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Sown Acreage"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:background="@drawable/spinner_bg"
+            android:id="@+id/sownacreage"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:inputType="numberDecimal"
+            android:hint="Enter Sown Acreage"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+
+
+        <LinearLayout
+            android:layout_marginLeft="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Organic?"
+                    android:textColor="@color/black"/>
+
+                <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                    android:id="@+id/toggleOrganic"
+                    custom:inactiveTextColor="@color/black"
+                    custom:activeBgColor="@color/green"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:textToggleLeft="Yes"
+                    custom:textToggleRight="No"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="Under Poly House?"
+                    android:textColor="@color/black"/>
+
+                <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+                    android:id="@+id/togglePolyhouse"
+                    custom:inactiveTextColor="@color/black"
+                    custom:activeBgColor="@color/green"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    custom:textToggleLeft="Yes"
+                    custom:textToggleRight="No"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Bund Plant Name"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:background="@drawable/spinner_bg"
+            android:id="@+id/bundplantname"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:inputType="text"
+            android:hint="Enter Bund Plant Name"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Number of Plants Under Bund"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:background="@drawable/spinner_bg"
+            android:id="@+id/plantsunderbund"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:inputType="number"
+            android:hint="Enter Number of Plants Under Bund"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Is SVP?"
+            android:textColor="@color/black"/>
+
+        <belka.us.androidtoggleswitch.widgets.ToggleSwitch
+            android:layout_marginLeft="8dp"
+            android:id="@+id/toggleSvp"
+            custom:inactiveTextColor="@color/black"
+            custom:activeBgColor="@color/green"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:textToggleLeft="Yes"
+            custom:textToggleRight="No"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:drawablePadding="5dp"
+            android:paddingTop="5dp"
+            android:text="Name of Seed Company"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:background="@drawable/spinner_bg"
+            android:id="@+id/seedcompany"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:inputType="text"
+            android:hint="Enter Name of Seed Company"
+            android:paddingLeft="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+        <Button
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_weight="0.3"
+            android:id="@+id/btnAddPlot"
+            android:paddingLeft="10dp"
+            android:background="@drawable/buttonbackground"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="      Add Crop      "
+            />
+        <LinearLayout
+           android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:textAlignment="center"
+                android:layout_weight="0.3"
+                android:id="@+id/previousBtn"
+                android:paddingLeft="10dp"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="  Add Crop  "
+               />
+
+            <Button
+                android:visibility="invisible"
+                android:layout_weight="0.4"
+                android:paddingLeft="10dp"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="   Add Crop   "
+                />
+<!--            android:drawableRight="@drawable/rightarriw"-->
+            <Button
+                android:textAlignment="center"
+                android:layout_weight="0.3"
+                android:id="@+id/subitBtn"
+                android:paddingLeft="10dp"
+                android:background="@drawable/buttonbackground"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="      Submit      "
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
